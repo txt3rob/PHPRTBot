@@ -30,9 +30,9 @@ class twitterbot {
         $this->connection = new TwitterOAuth($consumerkey, $consumersecret, $secretkey, $secretsecret);
         $botid = $this->connection->get('account/verify_credentials')->id_str;
         
-        $m = new MongoClient();
-        $db = $m->bots;
-        $ignorelist = $db->$botid;
+        //$m = new MongoClient();
+        //$db = $m->bots;
+        //$ignorelist = $db->$botid;
         
        return $this->connection;
         
@@ -128,9 +128,9 @@ class twitterbot {
     function hasbeenignored($userid){
         global $ignorelist;
         
-        $ignoreedsearch = $ignorelist->find(array("user" => $userid));
-        $ignoreedsearch = iterator_to_array($ignoreedsearch);
-        
+        //$ignoreedsearch = $ignorelist->find(array("user" => $userid));
+        //$ignoreedsearch = iterator_to_array($ignoreedsearch);
+        $ignoreedsearch ="";
         if(empty($ignoreedsearch)){
             return false;
         }
