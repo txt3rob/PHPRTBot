@@ -109,6 +109,7 @@ class twitterbot {
 	
 	{
 		$last_tweet = $this->connection->get('statuses/user_timeline', array('screen_name' => $screename, 'count' => $count, 'exclude_replies' => $exclude_replies = true));
+		return $last_tweet;
 	}
 
     function inblacklist($id){
