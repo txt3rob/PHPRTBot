@@ -1,6 +1,7 @@
 <?php
 
-require_once('twitteroauth-master/twitteroauth/twitteroauth.php');
+require "vendor/autoload.php";
+use Abraham\TwitterOAuth\TwitterOAuth;
 require_once('twitterbotclass.php');
 
 set_time_limit(0);
